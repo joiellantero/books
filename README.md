@@ -1,4 +1,4 @@
-# Project 1
+# Books
 
 > A website demonstrating SQL queries using python and flask; also, demonstrates HTTP status codes, API access, and API calls.
 
