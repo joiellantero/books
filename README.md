@@ -34,7 +34,7 @@
 
 ### Setup
 
-- After cloning run the following code to get started:
+- After cloning, run the following code to get started:
 
 > Open terminal and navigate to the directory of the cloned repo
 
