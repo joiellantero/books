@@ -24,10 +24,10 @@
 > Open terminal and navigate to the directory of the cloned repo
 
 ```shell
-$ cd joiellantero-<branchname>
+$ cd books-<branchname>
 
 # example - if on branch master
-$ cd joiellantero-master
+$ cd books-master
 ```
 
 > Install the required modules
