@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Book Page
+{% endblock %}
+
+{% block body %}
+
+    <div class="book-top-cards">
+        <div class="">
+            <div class="card mb-3" style="width: 400px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="http://covers.openlibrary.org/b/isbn/{{book_info[0]['isbn']}}-M.jpg" class="card-img" alt="Book Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-title book-div-p">{{ book_info[0]['title'] }}</p><br>
+                            <p class="card-text book-div-p">{{ book_info[0]['author'] }}</p><br>
+                            <p class="card-text book-div-p">{{ book_info[0]['year'] }}</p><br>
+                            <p class="card-text book-div-p"><small class="text-muted">{{ book_info[0]['isbn'] }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div>
+            <div class="card book-top-cards-right">
+                <div class="card-body ">
+                    <p>Number of Ratings: <span style="font-weight: 600;">{{ book_info[1]['work_ratings_count'] }}</span></p>
+                    <p>Average Rating: <span style="font-weight: 600;">{{ book_info[1]['average_rating'] }}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    <nav class="nav-link">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-book-rev-tab" data-toggle="tab" href="#nav-book-rev" role="tab" aria-controls="nav-book-rev" aria-selected="true">BOOK REVIEWS</a>
+            <a class="nav-item nav-link" id="nav-create-rev-tab" data-toggle="tab" href="#nav-create-rev" role="tab" aria-controls="nav-create-rev" aria-selected="false">CREATE REVIEW</a>
+        </div>
+    </nav>
+    <div class="tab-content book-rev-container" id="nav-tabContent">
+        <!-- goodreads review -->
+        <div class="tab-pane fade show active" id="nav-book-rev" role="tabpanel" aria-labelledby="nav-book-rev-tab">
+            
+            {% for review in reviews %}
+                <div class="card">
+                    <div class="card-header">
+                        {{ review['username'] }}
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p style="font-size: 13px;">Rating: {{ review['rating'] }} / 5</p>
+                            <p style="font-size: 14px; text-align: justify;">{{ review['comment'] }}</p>
+                        </blockquote>
+                    </div>
+                </div>
+            {% endfor %}
+            
+            <br>
+
+            <p class="centerize">{{ message }}</p>
+
+        </div>
+
+        <!-- current user review -->
+        <div class="tab-pane fade" id="nav-create-rev" role="tabpanel" aria-labelledby="nav-create-rev-tab">
+            <form class="" method="post">
+                <select class="custom-select book-rate-select centerize mb-3" id="rating" name="rating" required>
+                    <option selected>Rate this book</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                
+                <div class="form-group book-rev-comments-container centerize">
+                    <textarea class="form-control book-rev-comments" id="comments" name="comment" rows="4" placeholder="Write a comment" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary button-med centerize mt-3">SUBMIT</button>
+            </form>
+            
+        </div>
+    </div>
+   
+{% endblock %}
+
+
+{% block footer %}
+    <div class="centerize goodreads-footer">
+        <i class="fab fa-goodreads fa-2x"></i>
+        <p>powered by goodreads.com</p>
+    </div>
+{% endblock %}

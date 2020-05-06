@@ -1,0 +1,7 @@
+Flask
+Flask-Session
+SQLAlchemy
+psycopg2
+requests
+Werkzeug
+flask-login

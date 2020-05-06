@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Login
+{% endblock %}
+
+{% block body %}
+    <form class="login-form ml-auto mr-auto mt-4" style="width: 250px;" action="" method="post">
+        <div class="form-group input-icon">
+            <i class="fad fa-user"></i>
+            <input type="text" class="form-control" name="username" placeholder="Username" required>
+        </div>
+        <div class="form-group input-icon">
+            <i class="fad fa-lock-alt"></i>
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary button-med centerize mt-4">LOGIN</button>
+    </form>
+{% endblock %} 

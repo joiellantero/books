@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <i class="fad fa-books fa-3x primary-color"></i><br><br>
+    Welcome to <span class="books-title">books.</span></b>
+{% endblock %}
+
+{% block body %}
+
+    <div class="text-center">
+        <p>Digital library ang rating system.</p>
+        <p>Register or login to gain access to the library!</p>
+        <div class="home-buttons">
+            <a class="nav-link" href="/register">
+                <button type="button" class="btn btn-outline-primary button-large">
+                    REGISTER
+                </button>
+            </a>
+            <a class="nav-link" href="/login">
+                <button type="button" class="btn btn-outline-dark button-large">
+                    LOGIN
+                </button>
+            </a> 
+        </div>
+        
+    </div>
+   
+{% endblock %}
