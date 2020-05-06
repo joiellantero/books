@@ -15,7 +15,7 @@
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/me50/joiellantero.git`
+- Clone this repo to your local machine using `https://github.com/joiellantero/books.git`
 
 ### Setup
 
@@ -26,8 +26,8 @@
 ```shell
 $ cd joiellantero-<branchname>
 
-# example - if on branch web50-projects-2020-x-1
-$ cd joiellantero-web50-projects-2020-x-1
+# example - if on branch master
+$ cd joiellantero-master
 ```
 
 > Install the required modules
