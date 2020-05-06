@@ -31,6 +31,7 @@ def not_found(e):
 # landing page
 @app.route("/")
 def index():
+    session.clear()
     return render_template("index.html")
 
 
