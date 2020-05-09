@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/joiellantero/Documents/1 HarvardX/CS50W/Projects/project1 /env/bin/python" "$0" "$@"
-' '''
+#!/Users/joiellantero/Documents/Developer/books-website/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
