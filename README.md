@@ -6,7 +6,7 @@ A website demonstrating SQL queries using python and flask; also, demonstrates H
 
 This website uses the goodreads api to extract information about the books queried then allows uses to rate these books and send their own review. 
 
-> Disclaimer: This website is not deployed online. However, you may clone it and deploy it locally.
+> Disclaimer: As of December 8th 2020, Goodreads is no longer issuing new developer keys for our public developer API and plans to retire the current version of these tools. You can find more information [here](https://help.goodreads.com/s/article/Does-Goodreads-support-the-use-of-APIs).
 
 ## Usage
 
