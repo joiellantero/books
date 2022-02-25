@@ -2,7 +2,11 @@
 
 # books.
 
-> A website demonstrating SQL queries using python and flask; also, demonstrates HTTP status codes, API access, and API calls.
+A website demonstrating SQL queries using python and flask; also, demonstrates HTTP status codes, API access, and API calls. A project in CS50W
+
+This website uses the goodreads api to extract information about the books queried then allows uses to rate these books and send their own review. 
+
+> Disclaimer: This website is not deployed online. However, you may clone it and deploy it locally.
 
 ## Usage
 
